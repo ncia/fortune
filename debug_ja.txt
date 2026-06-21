@@ -1,0 +1,31 @@
+myMenuFirebaseNotConnected: Firebaseが接続されていません
+myMenuWindowsSetupNeeded: Windows セットアップが必要 (プレビュー)
+myMenuTouchToViewLogin: タップしてログイン UI を表示します
+myMenuNoName: ノーネーム
+myMenuPleaseLogin: ログインしてください
+myMenuTouchToSignupLogin: タップしてサインアップしてログインします
+myMenuSectionMyRecords: 私の記録
+myMenuDiaryStorage: ダイアリーストレージ
+myMenuCheckSavedDiary: 保存した日記を確認してください。
+myMenuFavoriteCards: お気に入りのカード
+myMenuMyFavoriteCardsList: 私の好きなカードリスト
+myMenuSectionAppSettings: アプリの設定
+myMenuPushNotifications: プッシュ通知
+myMenuPushNotificationsDesc: 新しい星占いとイベント
+myMenuLanguageSettings: 言語設定
+myMenuThemeSettings: テーマの設定
+myMenuChangeBackground: 背景画像を変更する
+myMenuSectionCustomerSupport: カスタマーサポート
+myMenuFaq: よくある質問
+myMenuAppInfo: アプリ情報
+myMenuSectionAccountManagement: アカウント管理
+myMenuLogout: ログアウト
+myMenuLogoutDesc: 現在のデバイスからログアウトします。
+myMenuEmailVerifiedMsg: メール認証を確認しました！ ✨
+myMenuEmailSendTitle: 確認メールを送信する
+myMenuEmailSendContent: 確認メールが送信されました。
+受信箱を確認し、リンクをクリックして、このボタンをもう一度押してください。
+myMenuConfirm: 確認する
+myMenuEmailErrorMsg: リクエストが多すぎるか、エラーが発生しました。
+myMenuEmailVerified: メール認証済み
+myMenuEmailNotVerified: メールが認証されていません (タップして確認します)

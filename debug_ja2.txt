@@ -1,0 +1,2 @@
+  String get myMenuSectionMyRecords => '私の記録';
+  String get myMenuDiaryStorage => 'ダイアリーストレージ';

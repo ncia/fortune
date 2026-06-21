@@ -1,0 +1,320 @@
+Script started.
+Translating to ar...
+Error for ar on attempt 1: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+Error for ar on attempt 2: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+Error for ar on attempt 3: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+FAILED to translate ar completely.
+Translating to be...
+Error for be on attempt 1: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+Error for be on attempt 2: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+Error for be on attempt 3: 
+  No API_KEY or ADC found. Please either:
+    - Set the `GOOGLE_API_KEY` environment variable.
+    - Manually pass the key with `genai.configure(api_key=my_api_key)`.
+    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.
+FAILED to translate be completely.
+Script started.
+Translating to ar...
+Error for ar on attempt 1: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+Error for ar on attempt 2: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+Error for ar on attempt 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+FAILED to translate ar completely.
+Translating to be...
+Error for be on attempt 1: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+Error for be on attempt 2: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+Error for be on attempt 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+FAILED to translate be completely.
+Translating to bg...
+Error for bg on attempt 1: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+Error for bg on attempt 2: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+Error for bg on attempt 3: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+FAILED to translate bg completely.
+Translating to ca...
+Script started.
+Translating to ar...
+Success for ar
+Translating to be...
+Success for be
+Translating to bg...
+Success for bg
+Translating to ca...
+Success for ca
+Translating to cs...
+Success for cs
+Translating to da...
+Success for da
+Translating to de...
+Success for de
+Translating to el...
+Success for el
+Translating to en...
+Success for en
+Translating to es...
+Success for es
+Translating to et...
+Success for et
+Translating to fa...
+Success for fa
+Translating to fi...
+Success for fi
+Translating to fr...
+Success for fr
+Translating to hi...
+Success for hi
+Translating to hr...
+Success for hr
+Translating to hu...
+Success for hu
+Translating to hy...
+Success for hy
+Translating to id...
+Success for id
+Translating to it...
+Success for it
+Translating to ja...
+Success for ja
+Translating to lt...
+Success for lt
+Translating to lv...
+Success for lv
+Translating to ml...
+Success for ml
+Translating to ms...
+Success for ms
+Translating to no...
+Success for no
+Translating to pl...
+Success for pl
+Translating to pt...
+Success for pt
+Translating to rm...
+Success for rm
+Translating to ro...
+Success for ro
+Translating to ru...
+Success for ru
+Translating to sk...
+Success for sk
+Translating to sl...
+Success for sl
+Translating to sr...
+Success for sr
+Translating to sv...
+Success for sv
+Translating to th...
+Error for th on attempt 1: 403 Your API key was reported as leaked. Please use another API key.
+Error for th on attempt 2: 403 Your API key was reported as leaked. Please use another API key.
+Error for th on attempt 3: 403 Your API key was reported as leaked. Please use another API key.
+FAILED to translate th completely.
+Translating to tl...
+Error for tl on attempt 1: 403 Your API key was reported as leaked. Please use another API key.
+Error for tl on attempt 2: 403 Your API key was reported as leaked. Please use another API key.
+Error for tl on attempt 3: 403 Your API key was reported as leaked. Please use another API key.
+FAILED to translate tl completely.
+Translating to tr...
+Error for tr on attempt 1: 403 Your API key was reported as leaked. Please use another API key.
+Error for tr on attempt 2: 403 Your API key was reported as leaked. Please use another API key.
+Error for tr on attempt 3: 403 Your API key was reported as leaked. Please use another API key.
+FAILED to translate tr completely.
+Translating to uk...
+Error for uk on attempt 1: 403 Your API key was reported as leaked. Please use another API key.
+Error for uk on attempt 2: 403 Your API key was reported as leaked. Please use another API key.
+Error for uk on attempt 3: 403 Your API key was reported as leaked. Please use another API key.
+FAILED to translate uk completely.
+Translating to vi...
+Error for vi on attempt 1: 403 Your API key was reported as leaked. Please use another API key.
+Error for vi on attempt 2: 403 Your API key was reported as leaked. Please use another API key.
+Error for vi on attempt 3: 403 Your API key was reported as leaked. Please use another API key.
+FAILED to translate vi completely.
+Translating to zh...
+Error for zh on attempt 1: 403 Your API key was reported as leaked. Please use another API key.
+Error for zh on attempt 2: 403 Your API key was reported as leaked. Please use another API key.
+Error for zh on attempt 3: 403 Your API key was reported as leaked. Please use another API key.
+FAILED to translate zh completely.
+Translating to zh_Hans...
+Error for zh_Hans on attempt 1: 403 Your API key was reported as leaked. Please use another API key.
+Error for zh_Hans on attempt 2: 403 Your API key was reported as leaked. Please use another API key.
+Error for zh_Hans on attempt 3: 403 Your API key was reported as leaked. Please use another API key.
+FAILED to translate zh_Hans completely.
+Translating to zh_Hant...
+Error for zh_Hant on attempt 1: 403 Your API key was reported as leaked. Please use another API key.
+Error for zh_Hant on attempt 2: 403 Your API key was reported as leaked. Please use another API key.
+Error for zh_Hant on attempt 3: 403 Your API key was reported as leaked. Please use another API key.
+FAILED to translate zh_Hant completely.
+Script started.
+Skipping ar, already translated.
+Skipping be, already translated.
+Skipping bg, already translated.
+Skipping ca, already translated.
+Skipping cs, already translated.
+Skipping da, already translated.
+Skipping de, already translated.
+Skipping el, already translated.
+Skipping en, already translated.
+Skipping es, already translated.
+Skipping et, already translated.
+Skipping fa, already translated.
+Skipping fi, already translated.
+Skipping fr, already translated.
+Skipping hi, already translated.
+Skipping hr, already translated.
+Skipping hu, already translated.
+Skipping hy, already translated.
+Skipping id, already translated.
+Skipping it, already translated.
+Skipping ja, already translated.
+Skipping lt, already translated.
+Skipping lv, already translated.
+Skipping ml, already translated.
+Skipping ms, already translated.
+Skipping no, already translated.
+Skipping pl, already translated.
+Skipping pt, already translated.
+Skipping rm, already translated.
+Skipping ro, already translated.
+Skipping ru, already translated.
+Skipping sk, already translated.
+Skipping sl, already translated.
+Skipping sr, already translated.
+Skipping sv, already translated.
+Translating to th...
+Error for th on attempt 1: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+Error for th on attempt 2: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+Error for th on attempt 3: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+FAILED to translate th completely.
+Translating to tl...
+Error for tl on attempt 1: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+Error for tl on attempt 2: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+Error for tl on attempt 3: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+FAILED to translate tl completely.
+Translating to tr...
+Error for tr on attempt 1: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+Success for tr
+Translating to uk...
+Script started.
+Skipping ar, already translated.
+Skipping be, already translated.
+Skipping bg, already translated.
+Skipping ca, already translated.
+Skipping cs, already translated.
+Skipping da, already translated.
+Skipping de, already translated.
+Skipping el, already translated.
+Skipping en, already translated.
+Skipping es, already translated.
+Skipping et, already translated.
+Skipping fa, already translated.
+Skipping fi, already translated.
+Skipping fr, already translated.
+Skipping hi, already translated.
+Skipping hr, already translated.
+Skipping hu, already translated.
+Skipping hy, already translated.
+Skipping id, already translated.
+Skipping it, already translated.
+Skipping ja, already translated.
+Skipping lt, already translated.
+Skipping lv, already translated.
+Skipping ml, already translated.
+Skipping ms, already translated.
+Skipping no, already translated.
+Skipping pl, already translated.
+Skipping pt, already translated.
+Skipping rm, already translated.
+Skipping ro, already translated.
+Skipping ru, already translated.
+Skipping sk, already translated.
+Skipping sl, already translated.
+Skipping sr, already translated.
+Skipping sv, already translated.
+Translating to th...
+Success for th
+Translating to tl...
+Success for tl
+Skipping tr, already translated.
+Translating to uk...
+Success for uk
+Translating to vi...
+Success for vi
+Translating to zh...
+Success for zh
+Translating to zh_Hans...
+Success for zh_Hans
+Translating to zh_Hant...
+Success for zh_Hant

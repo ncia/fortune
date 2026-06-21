@@ -1,0 +1,33 @@
+{
+  "themeName1": "Theme 1",
+  "themeName2": "Theme 2",
+  "themeName3": "Theme 3",
+  "themeMagicBook": "Magic Book",
+  "themeBlackCat": "Black Cat",
+  "themeEmptyPaidThemes": "Purchase themes in the shop\nto fill this space!",
+  "shopThemePurchaseTitle": "Purchase Theme",
+  "shopThemePurchaseContent": "Do you want to purchase the {skinName} theme for {cost} coins?",
+  "@shopThemePurchaseContent": {
+    "placeholders": {
+      "skinName": { "type": "String" },
+      "cost": { "type": "int" }
+    }
+  },
+  "shopCancel": "Cancel",
+  "shopPurchase": "Purchase",
+  "shopAlreadyOwned": "Already owned. Try applying it in theme settings!",
+  "shopPurchaseSuccess": "{skinName} purchased successfully! Check theme settings.",
+  "@shopPurchaseSuccess": {
+    "placeholders": {
+      "skinName": { "type": "String" }
+    }
+  },
+  "shopNotEnoughCoins": "Not enough coins.",
+  "shopOwned": "Owned",
+  "shopCoinPrice": "{cost} coins",
+  "@shopCoinPrice": {
+    "placeholders": {
+      "cost": { "type": "int" }
+    }
+  }
+}

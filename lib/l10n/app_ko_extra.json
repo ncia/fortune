@@ -1,0 +1,33 @@
+{
+  "themeName1": "테마 1",
+  "themeName2": "테마 2",
+  "themeName3": "테마 3",
+  "themeMagicBook": "마법책",
+  "themeBlackCat": "검은 고양이",
+  "themeEmptyPaidThemes": "상점에서 테마를 구매하여\n이곳을 채워보세요!",
+  "shopThemePurchaseTitle": "테마 구매",
+  "shopThemePurchaseContent": "{skinName} 테마를 {cost} 코인으로 구매하시겠습니까?",
+  "@shopThemePurchaseContent": {
+    "placeholders": {
+      "skinName": { "type": "String" },
+      "cost": { "type": "int" }
+    }
+  },
+  "shopCancel": "취소",
+  "shopPurchase": "구매",
+  "shopAlreadyOwned": "이미 보유하고 있습니다. 테마 설정에서 적용해보세요!",
+  "shopPurchaseSuccess": "{skinName} 구매 성공! 테마 설정에서 확인하세요.",
+  "@shopPurchaseSuccess": {
+    "placeholders": {
+      "skinName": { "type": "String" }
+    }
+  },
+  "shopNotEnoughCoins": "코인이 부족합니다.",
+  "shopOwned": "보유중",
+  "shopCoinPrice": "{cost} 코인",
+  "@shopCoinPrice": {
+    "placeholders": {
+      "cost": { "type": "int" }
+    }
+  }
+}
