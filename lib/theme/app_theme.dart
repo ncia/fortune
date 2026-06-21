@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  static const Color primaryColor = Color(0xFF6A0DAD); // Deep Purple
-  static const Color accentColor = Color(0xFFFF00FF); // Magenta
-  static const Color backgroundColor = Color(0xFF120024); // Very Dark Purple
+  static const Color primaryColor = Color(0xFFD4AF37); // Metallic Gold
+  static const Color accentColor = Color(0xFFFFDF00); // Golden Yellow
+  static const Color backgroundColor = Color(0xFF1A1500); // Very Dark Gold/Black
   
   static ThemeData get darkTheme {
     return ThemeData(
@@ -47,13 +47,13 @@ class AppTheme {
       ),
       useMaterial3: true,
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        backgroundColor: Color(0xFF0D001A),
+        backgroundColor: Color(0xFF110D00), // Almost black with gold tint
         selectedItemColor: accentColor,
         unselectedItemColor: Colors.white54,
         type: BottomNavigationBarType.fixed,
       ),
       snackBarTheme: const SnackBarThemeData(
-        backgroundColor: Color(0xFF320064), // Dark deep purple
+        backgroundColor: Color(0xFF332900), // Dark gold brown
         contentTextStyle: TextStyle(color: Colors.white),
         actionTextColor: accentColor,
       ),

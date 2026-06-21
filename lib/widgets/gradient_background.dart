@@ -21,9 +21,9 @@ class GradientBackground extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xFF6A0DAD), // Deep Purple
-            Color(0xFFB100FF), // Magenta/Purple
-            Color(0xFF120024), // Dark Background at bottom
+            Color(0xFF332900), // Dark Gold
+            Color(0xFF8B6508), // Dark Goldenrod
+            Color(0xFF110D00), // Almost Black
           ],
           stops: [0.0, 0.4, 1.0],
         ),

@@ -4,7 +4,7 @@ import '../data/spread_type.dart';
 import '../widgets/gradient_background.dart';
 import '../widgets/glass_container.dart';
 import 'reading_screen.dart';
-import '../data/witch_data.dart';
+import '../data/shaman_data.dart';
 import '../services/economy_service.dart';
 
 class SpreadSelectionScreen extends StatelessWidget {
@@ -209,3 +209,4 @@ class SpreadSelectionScreen extends StatelessWidget {
     );
   }
 }
+

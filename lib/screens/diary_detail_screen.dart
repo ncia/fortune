@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import '../widgets/gradient_background.dart';
 import '../widgets/glass_container.dart';
 import '../widgets/spread_layouts.dart';
-import '../widgets/witch_profile_dialog.dart';
+import '../widgets/shaman_profile_dialog.dart';
 import '../widgets/diary_tag_selector.dart';
 import '../data/tarot_diary.dart';
 import '../data/tarot_data.dart';
-import '../data/witch_data.dart';
+import '../data/shaman_data.dart';
 import '../data/spread_type.dart';
 import '../services/diary_service.dart';
 import '../services/translation_service.dart';
@@ -102,7 +102,7 @@ class _DiaryDetailScreenState extends State<DiaryDetailScreen> {
       }
       
       String translatedNote = _diary.myNote;
-      if (translatedNote.isNotEmpty && translatedNote != '타로 리딩' && translatedNote != AppLocalizations.of(context)!.diaryTarotReading) {
+      if (translatedNote.isNotEmpty && translatedNote != '?��?리딩' && translatedNote != AppLocalizations.of(context)!.diaryTarotReading) {
         translatedNote = await _translationService.translateText(translatedNote, targetLocale);
       }
 
@@ -123,7 +123,7 @@ class _DiaryDetailScreenState extends State<DiaryDetailScreen> {
   Widget build(BuildContext context) {
     // SpreadType 복원
     SpreadType spreadType;
-    if (_diary.spreadType == '타로 상담' || _diary.spreadType == AppLocalizations.of(context)!.diaryTarotConsult) {
+    if (_diary.spreadType == '?��??�담' || _diary.spreadType == AppLocalizations.of(context)!.diaryTarotConsult) {
       if (_diary.cardIds.length == 1) spreadType = SpreadType.oneCard;
       else if (_diary.cardIds.length == 2) spreadType = SpreadType.twoCard;
       else if (_diary.cardIds.length == 3) spreadType = SpreadType.threeCard;
@@ -221,7 +221,7 @@ class _DiaryDetailScreenState extends State<DiaryDetailScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      // 커뮤니티 공개 여부 설정
+                      // 커�??�티 공개 ?��? ?�정
                 GlassContainer(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   borderRadius: 16,
@@ -286,7 +286,7 @@ class _DiaryDetailScreenState extends State<DiaryDetailScreen> {
                   const SizedBox(height: 20),
                 ],
 
-                // 태그 섹션
+                // ?�그 ?�션
                 GlassContainer(
                   padding: const EdgeInsets.all(16),
                   borderRadius: 16,
@@ -297,7 +297,7 @@ class _DiaryDetailScreenState extends State<DiaryDetailScreen> {
                 ),
                 const SizedBox(height: 20),
 
-                // 스프레드 레이아웃
+                // ?�프?�드 ?�이?�웃
                 SpreadLayoutBuilder(
                   spreadType: spreadType,
                   selectedCardIndices: selectedCardIndices,
@@ -367,7 +367,7 @@ class _DiaryDetailScreenState extends State<DiaryDetailScreen> {
 
                 const SizedBox(height: 20),
 
-                // 후일담 메모 섹션
+                // ?�일??메모 ?�션
                 GlassContainer(
                   padding: const EdgeInsets.all(16),
                   borderRadius: 16,
@@ -501,3 +501,4 @@ class _DiaryDetailScreenState extends State<DiaryDetailScreen> {
     );
   }
 }
+

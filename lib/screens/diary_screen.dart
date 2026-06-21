@@ -6,8 +6,8 @@ import '../widgets/gradient_background.dart';
 import '../widgets/glass_container.dart';
 import '../data/tarot_diary.dart';
 import '../data/tarot_data.dart';
-import '../data/witch_data.dart';
-import '../widgets/witch_profile_dialog.dart';
+import '../data/shaman_data.dart';
+import '../widgets/shaman_profile_dialog.dart';
 import '../services/diary_service.dart';
 import 'diary_detail_screen.dart';
 import 'diary_calendar_screen.dart';
@@ -42,7 +42,7 @@ class _DiaryScreenState extends State<DiaryScreen> {
                 ),
               ),
               SizedBox(height: 12),
-              // 탭 바
+              // ??�?
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Container(
@@ -174,7 +174,7 @@ class _DiaryListView extends StatelessWidget {
                               ),
                               SizedBox(height: 4),
                               Text(
-                                '${diary.spreadType == "타로 상담" ? AppLocalizations.of(context)!.diaryTarotConsult : AppLocalizations.of(context)!.diaryTarotReading} - ${TarotLocalizations.getName(context, card.id)}${diary.cardIds.length > 1 ? " ${AppLocalizations.of(context)!.diaryAndMore(diary.cardIds.length - 1)}" : ""}',
+                                '${diary.spreadType == "?��??�담" ? AppLocalizations.of(context)!.diaryTarotConsult : AppLocalizations.of(context)!.diaryTarotReading} - ${TarotLocalizations.getName(context, card.id)}${diary.cardIds.length > 1 ? " ${AppLocalizations.of(context)!.diaryAndMore(diary.cardIds.length - 1)}" : ""}',
                                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
                               ),
                               if (diary.tags.isNotEmpty) ...[
@@ -190,7 +190,7 @@ class _DiaryListView extends StatelessWidget {
                                 ),
                               ],
                               SizedBox(height: 8),
-                              if (diary.myNote.isNotEmpty && diary.myNote != '타로 리딩')
+                              if (diary.myNote.isNotEmpty && diary.myNote != '?��?리딩')
                                 Container(
                                   width: double.infinity,
                                   padding: EdgeInsets.all(8),
@@ -332,3 +332,4 @@ class _DiaryListView extends StatelessWidget {
     }
   }
 }
+

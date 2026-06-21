@@ -6,7 +6,7 @@ import 'reading_screen.dart';
 import '../services/tarot_ai_service.dart';
 import '../services/tts_service.dart';
 import '../services/economy_service.dart';
-import '../data/witch_data.dart';
+import '../data/shaman_data.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../services/diary_service.dart';
@@ -255,7 +255,7 @@ class _ChatScreenState extends State<ChatScreen> {
       _textController.clear();
       _isWaitingForCards = true;
       
-      // AI의 카드 뽑기 안내 메시지
+      // AI??카드 뽑기 ?�내 메시지
       _messages.add(ChatMessage(
         text: AppLocalizations.of(context)!.chatAskPickCards,
         isUser: false,
@@ -263,7 +263,7 @@ class _ChatScreenState extends State<ChatScreen> {
     });
     _scrollToBottom();
     
-    // 약간의 지연 후 바로 카드 뽑기 화면으로 자동 진입
+    // ?�간??지????바로 카드 뽑기 ?�면?�로 ?�동 진입
     Future.delayed(const Duration(milliseconds: 1500), () {
       if (mounted) {
         _navigateToPicking();
@@ -294,7 +294,7 @@ class _ChatScreenState extends State<ChatScreen> {
         isUser: false,
       ));
       _isTyping = true;
-      _messages.add(ChatMessage(text: "", isUser: false)); // 스트리밍 결과를 담을 빈 메시지
+      _messages.add(ChatMessage(text: "", isUser: false)); // ?�트리밍 결과�??�을 �?메시지
     });
     _scrollToBottom();
 
@@ -322,10 +322,10 @@ class _ChatScreenState extends State<ChatScreen> {
       final cleanText = _messages.last.text.replaceAll(RegExp(r'\*+'), '');
       _ttsService.speak(_selectedWitch, cleanText, Localizations.localeOf(context).languageCode);
 
-      // 다이어리 자동 저장
+      // ?�이?�리 ?�동 ?�??
       _autoSaveDiary(cards, cleanText);
 
-      // 마력의 가루 지급
+      // 마력??가�?지�?
       await EconomyService().addMagicDust(10);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -357,7 +357,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
       await DiaryService.instance.saveToCloudOnly(diary);
 
-      // 말풍선에 저장 버튼을 달기 위해 마지막 메시지 교체
+      // 말풍?�에 ?�??버튼???�기 ?�해 마�?�?메시지 교체
       if (mounted) {
         setState(() {
           final lastMsg = _messages.last;
@@ -630,3 +630,4 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 }
+

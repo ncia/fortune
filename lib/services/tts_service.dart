@@ -6,7 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:wakelock_plus/wakelock_plus.dart';
-import '../data/witch_data.dart';
+import '../data/shaman_data.dart';
 import 'audio_service.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -111,7 +111,7 @@ class TtsService {
 
         final Uint8List audioBytes = base64Decode(base64Audio);
         
-        // 카르엔(Karen) 마녀일 경우 노파 목소리를 위해 피치/재생속도를 낮춤
+        // 카르??Karen) 마�???경우 ?�파 목소리�? ?�해 ?�치/?�생?�도�???��
         final double playbackRate = _currentWitch?.id == 'karen' ? 0.85 : 1.0;
         await _audioPlayer.setPlaybackRate(playbackRate);
 
@@ -151,3 +151,4 @@ class TtsService {
     AudioService().resumeBgm();
   }
 }
+

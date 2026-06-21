@@ -14,13 +14,14 @@ class ThemeManager {
     });
   }
 
-  static const String _themePrefKey = 'selected_theme_path';
+  static const String _themePrefKey = 'selected_fortune_theme_path';
   
   // 기본 이미지 경로
-  static const String _defaultTheme = 'assets/images/theme/magic_circle.png';
+  static const String _defaultTheme = 'assets/images/taiji_image.png';
   
   // 사용 가능한 테마 목록 (현재 폴더에 있는 파일들)
   final List<String> availableThemes = [
+    'assets/images/taiji_image.png',
     'assets/images/theme/magic_circle.png',
     'assets/images/theme/magic_circle1.png',
     'assets/images/theme/magic_circle2.png',
@@ -44,6 +45,7 @@ class ThemeManager {
     } else {
       // Default free themes
       unlockedThemesNotifier.value = [
+        'assets/images/taiji_image.png',
         'assets/images/theme/magic_circle.png',
         'assets/images/theme/magic_circle1.png',
         'assets/images/theme/magic_circle2.png',
