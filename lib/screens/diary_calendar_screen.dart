@@ -136,7 +136,7 @@ class _DiaryCalendarScreenState extends State<DiaryCalendarScreen> {
             ),
           ),
           const SizedBox(height: 12),
-          // ?�택???�짜???�기 목록
+          // ?�택???�짜???�기 목록
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.6,
             child: _buildSelectedDayDiaries(),
@@ -149,7 +149,7 @@ class _DiaryCalendarScreenState extends State<DiaryCalendarScreen> {
   Widget _buildSelectedDayDiaries() {
     if (_selectedDay == null) {
       return const Center(
-        child: Text('?�짜�??�택?�세??,
+        child: Text('날짜를 선택하세요',
             style: TextStyle(color: Colors.white54)),
       );
     }
@@ -203,7 +203,7 @@ class _DiaryCalendarScreenState extends State<DiaryCalendarScreen> {
                 padding: const EdgeInsets.all(12),
                 child: Row(
                   children: [
-                    // 카드 ?�네??
+                    // 카드 ?�네??
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: Image.asset(
@@ -245,7 +245,7 @@ class _DiaryCalendarScreenState extends State<DiaryCalendarScreen> {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            '${(diary.spreadType == '?��??�담' || diary.spreadType == AppLocalizations.of(context)!.diaryTarotConsult) ? AppLocalizations.of(context)!.diaryTarotConsult : AppLocalizations.of(context)!.diaryTarotReading} - ${TarotLocalizations.getName(context, card.id)}',
+                            '${(diary.spreadType == '?��??�담' || diary.spreadType == AppLocalizations.of(context)!.diaryTarotConsult) ? AppLocalizations.of(context)!.diaryTarotConsult : AppLocalizations.of(context)!.diaryTarotReading} - ${TarotLocalizations.getName(context, card.id)}',
                             style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,

@@ -25,7 +25,7 @@ class AudioService {
   Future<void> playMysteriousBgm() async {
     if (_isBgmPlaying) return;
     try {
-      await _bgmPlayer.play(AssetSource('audio/bgm.mp3'), volume: _isMuted ? 0.0 : _volume);
+      await _bgmPlayer.play(AssetSource('audio/new_bgm.m4a'), volume: _isMuted ? 0.0 : _volume);
       _isBgmPlaying = true;
     } catch (e) {
       print("Error playing BGM: $e");

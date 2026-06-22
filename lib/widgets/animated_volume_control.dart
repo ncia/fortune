@@ -21,29 +21,20 @@ class _AnimatedVolumeControlState extends State<AnimatedVolumeControl> {
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
-      child: SizedBox(
-        width: 38,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        curve: Curves.easeInOut,
+        width: _isHovered ? 160 : 38,
         height: 38,
-        child: Stack(
-          clipBehavior: Clip.none,
-          alignment: Alignment.centerLeft, // Expand to the right
+        decoration: BoxDecoration(
+          color: Colors.black.withOpacity(0.5),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: Colors.white24, width: 1),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            AnimatedPositioned(
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.easeInOut,
-              left: 0, // Pin to the left
-              width: _isHovered ? 160 : 38,
-              height: 38,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.5),
-                  borderRadius: BorderRadius.circular(24),
-                  border: Border.all(color: Colors.white24, width: 1),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start, // Start from the left
-                  children: [
             GestureDetector(
               onTap: () {
                 setState(() {
@@ -96,13 +87,9 @@ class _AnimatedVolumeControlState extends State<AnimatedVolumeControl> {
                   ),
                 ),
               ),
-                  ], // children of Row
-                ), // Row
-              ), // Container
-            ), // AnimatedPositioned
-          ], // children of Stack
-        ), // Stack
-      ), // SizedBox
-    ); // MouseRegion
+          ],
+        ),
+      ),
+    );
   }
 }
