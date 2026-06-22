@@ -8915,6 +8915,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Please enter your inquiry content.'**
   String get contactEmptyErrorMessage;
+
+  /// No description provided for @witchSajuGreetingMorgan.
+  ///
+  /// In en, this message translates to:
+  /// **'I shall look into your fate. Please tell me your name and birth year, month, day, and time...'**
+  String get witchSajuGreetingMorgan;
+
+  /// No description provided for @witchSajuGreetingLuna.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s see what the spirits say. I need your name, birth year, month, day, and time.'**
+  String get witchSajuGreetingLuna;
+
+  /// No description provided for @witchSajuGreetingSerena.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen carefully... tell me your name and the year, month, day, and time you were born.'**
+  String get witchSajuGreetingSerena;
+
+  /// No description provided for @witchSajuGreetingAria.
+  ///
+  /// In en, this message translates to:
+  /// **'Hehe! What\'s your name, birth year, month, day, and time?'**
+  String get witchSajuGreetingAria;
+
+  /// No description provided for @witchSajuGreetingEvelyn.
+  ///
+  /// In en, this message translates to:
+  /// **'The flow of energy requires your birth details. Please provide your name, year, month, day, and time.'**
+  String get witchSajuGreetingEvelyn;
+
+  /// No description provided for @witchSajuGreetingKaren.
+  ///
+  /// In en, this message translates to:
+  /// **'To read the heavens, I must know when you arrived. Tell me your birth year, month, day, and time.'**
+  String get witchSajuGreetingKaren;
+
+  /// No description provided for @sajuInputTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Birth Details'**
+  String get sajuInputTitle;
+
+  /// No description provided for @sajuInputSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your birth date and time to proceed.'**
+  String get sajuInputSubtitle;
+
+  /// No description provided for @sajuInputName.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get sajuInputName;
+
+  /// No description provided for @sajuInputYear.
+  ///
+  /// In en, this message translates to:
+  /// **'Year'**
+  String get sajuInputYear;
+
+  /// No description provided for @sajuInputMonth.
+  ///
+  /// In en, this message translates to:
+  /// **'Month'**
+  String get sajuInputMonth;
+
+  /// No description provided for @sajuInputDay.
+  ///
+  /// In en, this message translates to:
+  /// **'Day'**
+  String get sajuInputDay;
+
+  /// No description provided for @sajuInputTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Time'**
+  String get sajuInputTime;
+
+  /// No description provided for @sajuInputCancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get sajuInputCancel;
+
+  /// No description provided for @sajuInputConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get sajuInputConfirm;
 }
 
 class _AppLocalizationsDelegate

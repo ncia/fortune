@@ -13,6 +13,9 @@ class Witch {
   final String imagePath;
   final String personalityPrompt;
   final String speechifyVoiceId;
+  final String sajuGreeting;
+  final double playbackRate;
+  final double pitch;
 
   const Witch({
     required this.id,
@@ -26,6 +29,9 @@ class Witch {
     required this.imagePath,
     required this.personalityPrompt,
     required this.speechifyVoiceId,
+    required this.sajuGreeting,
+    this.playbackRate = 1.0,
+    this.pitch = 1.0,
   });
 
   @override
@@ -52,7 +58,10 @@ List<Witch> getLocalizedWitches(BuildContext context) {
       backgroundStory: l10n.witchBgMorgan,
       imagePath: 'assets/images/haewon_bosal.png',
       personalityPrompt: l10n.witchPromptMorgan,
-      speechifyVoiceId: 'min-seo', // 32세 여성 (도도하고 성숙함)
+      speechifyVoiceId: 'min-seo',
+      sajuGreeting: l10n.witchSajuGreetingMorgan,
+      playbackRate: 0.95,
+      pitch: 1.0,
     ),
     Witch(
       id: 'luna',
@@ -65,7 +74,10 @@ List<Witch> getLocalizedWitches(BuildContext context) {
       backgroundStory: l10n.witchBgLuna,
       imagePath: 'assets/images/yonghwa_sindang.png',
       personalityPrompt: l10n.witchPromptLuna,
-      speechifyVoiceId: 'bo-kyung', // 42세 여성 (중저음, 차분함)
+      speechifyVoiceId: 'bo-kyung',
+      sajuGreeting: l10n.witchSajuGreetingLuna,
+      playbackRate: 1.05,
+      pitch: 0.95,
     ),
     Witch(
       id: 'serena',
@@ -78,7 +90,10 @@ List<Witch> getLocalizedWitches(BuildContext context) {
       backgroundStory: l10n.witchBgSerena,
       imagePath: 'assets/images/mansin_grandma.png',
       personalityPrompt: l10n.witchPromptSerena,
-      speechifyVoiceId: 'hee-young', // 115세 여성 (신비롭고 몽환적)
+      speechifyVoiceId: 'hee-young',
+      sajuGreeting: l10n.witchSajuGreetingSerena,
+      playbackRate: 0.85,
+      pitch: 0.85,
     ),
     Witch(
       id: 'aria',
@@ -91,7 +106,10 @@ List<Witch> getLocalizedWitches(BuildContext context) {
       backgroundStory: l10n.witchBgAria,
       imagePath: 'assets/images/baby_fairy.png',
       personalityPrompt: l10n.witchPromptAria,
-      speechifyVoiceId: 'hye-won', // 19세 소녀 (밝고 경쾌함)
+      speechifyVoiceId: 'hye-won',
+      sajuGreeting: l10n.witchSajuGreetingAria,
+      playbackRate: 1.15,
+      pitch: 1.15,
     ),
     Witch(
       id: 'evelyn',
@@ -104,7 +122,10 @@ List<Witch> getLocalizedWitches(BuildContext context) {
       backgroundStory: l10n.witchBgEvelyn,
       imagePath: 'assets/images/cheonghak_doryeong.png',
       personalityPrompt: l10n.witchPromptEvelyn,
-      speechifyVoiceId: 'joo-hyun', // 40세 여성 (따뜻하고 기품있음)
+      speechifyVoiceId: 'min-ho',
+      sajuGreeting: l10n.witchSajuGreetingEvelyn,
+      playbackRate: 1.0,
+      pitch: 1.05,
     ),
     Witch(
       id: 'karen',
@@ -117,7 +138,10 @@ List<Witch> getLocalizedWitches(BuildContext context) {
       backgroundStory: l10n.witchBgKaren,
       imagePath: 'assets/images/baekun_dosa.png',
       personalityPrompt: l10n.witchPromptKaren,
-      speechifyVoiceId: 'soo-min', // 92세 할머니 (느리고 지혜로움)
+      speechifyVoiceId: 'sang-hoon',
+      sajuGreeting: l10n.witchSajuGreetingKaren,
+      playbackRate: 0.8,
+      pitch: 0.8,
     ),
   ];
 }

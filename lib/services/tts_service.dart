@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 import 'package:audioplayers/audioplayers.dart';
@@ -111,8 +111,8 @@ class TtsService {
 
         final Uint8List audioBytes = base64Decode(base64Audio);
         
-        // 카르??Karen) 마�???경우 ?�파 목소리�? ?�해 ?�치/?�생?�도�???��
-        final double playbackRate = _currentWitch?.id == 'karen' ? 0.85 : 1.0;
+        // 카르??Karen) 마�???경우 ?�파 목소리�? ?�해 ?�치/?�생?�도�???��
+        final double playbackRate = _currentWitch?.playbackRate ?? 1.0;
         await _audioPlayer.setPlaybackRate(playbackRate);
 
         if (kIsWeb) {

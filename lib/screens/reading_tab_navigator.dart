@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'reading_intro_screen.dart';
 import 'spread_selection_screen.dart';
 import '../data/shaman_data.dart';
+import 'reading_screen.dart';
 
 class ReadingTabNavigator extends StatelessWidget {
   const ReadingTabNavigator({super.key});
@@ -20,6 +21,8 @@ class ReadingTabNavigator extends StatelessWidget {
         } else if (settings.name == '/selection') {
           final witch = settings.arguments as Witch?;
           page = SpreadSelectionScreen(showBackButton: true, selectedWitch: witch);
+        } else if (settings.name == '/saju') {
+          page = const ReadingScreen();
         } else {
           page = const SizedBox();
         }

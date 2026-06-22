@@ -4854,4 +4854,56 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get contactEmptyErrorMessage => 'Please enter your inquiry content.';
+
+  @override
+  String get witchSajuGreetingMorgan =>
+      'I shall look into your fate. Please tell me your name and birth year, month, day, and time...';
+
+  @override
+  String get witchSajuGreetingLuna =>
+      'Let\'s see what the spirits say. I need your name, birth year, month, day, and time.';
+
+  @override
+  String get witchSajuGreetingSerena =>
+      'Listen carefully... tell me your name and the year, month, day, and time you were born.';
+
+  @override
+  String get witchSajuGreetingAria =>
+      'Hehe! What\'s your name, birth year, month, day, and time?';
+
+  @override
+  String get witchSajuGreetingEvelyn =>
+      'The flow of energy requires your birth details. Please provide your name, year, month, day, and time.';
+
+  @override
+  String get witchSajuGreetingKaren =>
+      'To read the heavens, I must know when you arrived. Tell me your birth year, month, day, and time.';
+
+  @override
+  String get sajuInputTitle => 'Enter Birth Details';
+
+  @override
+  String get sajuInputSubtitle =>
+      'Please enter your birth date and time to proceed.';
+
+  @override
+  String get sajuInputName => 'Name';
+
+  @override
+  String get sajuInputYear => 'Year';
+
+  @override
+  String get sajuInputMonth => 'Month';
+
+  @override
+  String get sajuInputDay => 'Day';
+
+  @override
+  String get sajuInputTime => 'Time';
+
+  @override
+  String get sajuInputCancel => 'Cancel';
+
+  @override
+  String get sajuInputConfirm => 'Confirm';
 }

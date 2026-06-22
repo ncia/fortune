@@ -3,7 +3,7 @@ import 'package:flutter_tarot/l10n/app_localizations.dart';
 import '../data/spread_type.dart';
 import '../widgets/gradient_background.dart';
 import '../widgets/glass_container.dart';
-import 'reading_screen.dart';
+import 'tarot_reading_screen.dart';
 import '../data/shaman_data.dart';
 import '../services/economy_service.dart';
 
@@ -56,7 +56,7 @@ class SpreadSelectionScreen extends StatelessWidget {
                         context,
                         title: AppLocalizations.of(context)!.spreadOneCardName,
                         description: AppLocalizations.of(context)!.spreadOneCardDesc,
-                        icon: Icons.filter_1,
+                        icon: Icons.pan_tool,
                         type: SpreadType.oneCard,
                       ),
                       const SizedBox(height: 16),
@@ -64,7 +64,7 @@ class SpreadSelectionScreen extends StatelessWidget {
                         context,
                         title: AppLocalizations.of(context)!.spreadTwoCardName,
                         description: AppLocalizations.of(context)!.spreadTwoCardDesc,
-                        icon: Icons.filter_2,
+                        icon: Icons.face,
                         type: SpreadType.twoCard,
                       ),
                       const SizedBox(height: 16),
@@ -72,7 +72,7 @@ class SpreadSelectionScreen extends StatelessWidget {
                         context,
                         title: AppLocalizations.of(context)!.spreadThreeCardName,
                         description: AppLocalizations.of(context)!.spreadThreeCardDesc,
-                        icon: Icons.filter_3,
+                        icon: Icons.menu_book, // Saju (Destiny Book)
                         type: SpreadType.threeCard,
                       ),
                       const SizedBox(height: 16),
@@ -80,7 +80,7 @@ class SpreadSelectionScreen extends StatelessWidget {
                         context,
                         title: AppLocalizations.of(context)!.spreadFourCardName,
                         description: AppLocalizations.of(context)!.spreadFourCardDesc,
-                        icon: Icons.filter_4,
+                        icon: Icons.style, // Hwatu
                         type: SpreadType.fourCard,
                       ),
                       const SizedBox(height: 16),
@@ -88,7 +88,7 @@ class SpreadSelectionScreen extends StatelessWidget {
                         context,
                         title: AppLocalizations.of(context)!.spreadFiveCardName,
                         description: AppLocalizations.of(context)!.spreadFiveCardDesc,
-                        icon: Icons.filter_5,
+                        icon: Icons.calendar_month, // Hwatu Monthly Fortune
                         type: SpreadType.fiveCard,
                       ),
                       const SizedBox(height: 16),
@@ -96,7 +96,7 @@ class SpreadSelectionScreen extends StatelessWidget {
                         context,
                         title: AppLocalizations.of(context)!.spreadCelticCrossName,
                         description: AppLocalizations.of(context)!.spreadCelticCrossDesc,
-                        icon: Icons.grid_view,
+                        icon: Icons.calculate, // Hwatu Number Calculation
                         type: SpreadType.celticCross,
                       ),
                     ],
@@ -161,7 +161,7 @@ class SpreadSelectionScreen extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => ReadingScreen(spreadType: type, selectedWitch: selectedWitch, skipIntro: true),
+              builder: (context) => TarotReadingScreen(spreadType: type, selectedWitch: selectedWitch, skipIntro: true),
             ),
           );
         }

@@ -12,47 +12,51 @@ class AppLocalizationsKo extends AppLocalizations {
   String get appTitle => '타로 점집';
 
   @override
-  String get spreadSelectionTitle => '스프레드 선택';
+  String get spreadSelectionTitle => '신점 보기';
 
   @override
-  String get spreadSelectionSubtitle => '질문에 가장 알맞은 타로 배열법을 선택하세요';
+  String get spreadSelectionSubtitle => '질문에 가장 알맞은 신점 방식을 선택하세요';
 
   @override
-  String get spreadOneCardName => '원 카드';
+  String get spreadOneCardName => '손금';
 
   @override
-  String get spreadOneCardDesc => '간단한 질문이나 오늘의 운세를 볼 때 사용하는 1장 배열법입니다.';
+  String get spreadOneCardDesc => '당신의 손금에 담긴 운명과 성향을 간단히 짚어보는 신점 방식입니다.';
 
   @override
-  String get spreadTwoCardName => '투 카드';
+  String get spreadTwoCardName => '관상';
 
   @override
-  String get spreadTwoCardDesc => '현재 상황과 조언을 간단하게 파악하기 좋은 2장 배열법입니다.';
+  String get spreadTwoCardDesc =>
+      '당신의 얼굴에 나타난 길흉화복을 통해 현재 상황과 조언을 짚어보는 신점 방식입니다.';
 
   @override
-  String get spreadThreeCardName => '쓰리 카드';
+  String get spreadThreeCardName => '사주팔자';
 
   @override
-  String get spreadThreeCardDesc => '과거, 현재, 미래의 흐름을 파악하기 좋은 3장 배열법입니다.';
+  String get spreadThreeCardDesc =>
+      '태어난 연월일시를 바탕으로 과거, 현재, 미래의 운세 흐름을 짚어보는 신점 방식입니다.';
 
   @override
-  String get spreadFourCardName => '포 카드';
+  String get spreadFourCardName => '화투점 - 짝맞추기';
 
   @override
-  String get spreadFourCardDesc => '문제의 원인부터 조언, 결과까지 명확하게 진단하는 4장 배열법입니다.';
+  String get spreadFourCardDesc =>
+      '화투패의 짝을 맞추어 그날의 운세와 문제의 해결책을 재미있게 풀어보는 신점 방식입니다.';
 
   @override
-  String get spreadFiveCardName => '파이브 카드';
+  String get spreadFiveCardName => '화투점 - 월별운세';
 
   @override
   String get spreadFiveCardDesc =>
-      '상황의 핵심과 원인, 그리고 잠재적 결과까지 종합적으로 살펴보는 5장 배열법입니다.';
+      '각 달을 상징하는 화투패를 통해 다가올 달의 흐름과 주요 운세를 짚어보는 신점 방식입니다.';
 
   @override
-  String get spreadCelticCrossName => '켈틱 크로스';
+  String get spreadCelticCrossName => '화투점 - 숫자계산';
 
   @override
-  String get spreadCelticCrossDesc => '복잡한 문제의 심층 분석과 해결책을 찾는 10장 배열법입니다.';
+  String get spreadCelticCrossDesc =>
+      '화투패의 숫자를 더하고 빼는 전통적인 방식을 통해 명쾌한 길흉을 판단하는 신점 방식입니다.';
 
   @override
   String get positionOneCard => '오늘의 카드';
@@ -4495,4 +4499,55 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get contactEmptyErrorMessage => '문의 내용을 입력해주세요.';
+
+  @override
+  String get witchSajuGreetingMorgan =>
+      '그대의 한 맺힌 운명을 들여다보려 하네. 이름과 태어난 연월일시를 내게 일러주시게나...';
+
+  @override
+  String get witchSajuGreetingLuna =>
+      '장군님께서 호통치시기 전에 바른대로 말해! 이름은 뭐고 언제 태어났어? 연월일시 다 불어!';
+
+  @override
+  String get witchSajuGreetingSerena =>
+      '쯧쯧... 다 안다만, 하늘이 정해준 네 이름과 생년월일시를 먼저 들어보자꾸나.';
+
+  @override
+  String get witchSajuGreetingAria =>
+      '언니! 나랑 선녀님한테 언니 이름이랑 언제 태어났는지 알려주라~ 생년월일시 고고!';
+
+  @override
+  String get witchSajuGreetingEvelyn =>
+      '당신의 운명을 비추는 별을 찾으려 합니다. 이름과 태어난 연월일시를 알려주시겠어요?';
+
+  @override
+  String get witchSajuGreetingKaren =>
+      '허허... 천기의 흐름을 읽으려 하니, 자네의 이름과 세상에 나온 연월일시를 일러보게나.';
+
+  @override
+  String get sajuInputTitle => '사주 정보 입력';
+
+  @override
+  String get sajuInputSubtitle => '정확한 풀이를 위해 생년월일시를 입력해주세요.';
+
+  @override
+  String get sajuInputName => '이름';
+
+  @override
+  String get sajuInputYear => '태어난 연도 (예: 1990)';
+
+  @override
+  String get sajuInputMonth => '월';
+
+  @override
+  String get sajuInputDay => '일';
+
+  @override
+  String get sajuInputTime => '태어난 시간 (예: 14시)';
+
+  @override
+  String get sajuInputCancel => '취소';
+
+  @override
+  String get sajuInputConfirm => '운명 확인하기';
 }

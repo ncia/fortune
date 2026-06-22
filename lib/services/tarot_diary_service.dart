@@ -3,17 +3,17 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import '../data/saju_diary.dart';
+import '../data/tarot_diary.dart';
 
 /// 타로 일기 로컬(Hive) + 클라우드(Firestore) 동기화 서비스
-class DiaryService {
-  static final DiaryService _instance = DiaryService._internal();
-  static DiaryService get instance => _instance;
-  DiaryService._internal();
+class TarotDiaryService {
+  static final TarotDiaryService _instance = TarotDiaryService._internal();
+  static TarotDiaryService get instance => _instance;
+  TarotDiaryService._internal();
 
-  static const String _boxName = 'koeran-shaman_diaries';
+  static const String _boxName = 'tarot_diaries';
   static const String _tagBoxName = 'custom_tags';
-  Box<SajuDiary>? _diaryBox;
+  Box<TarotDiary>? _diaryBox;
   Box<String>? _tagBox;
 
   /// 기본 제공 태그 목록
@@ -31,14 +31,14 @@ class DiaryService {
   Future<void> init() async {
     await Hive.initFlutter();
     if (!Hive.isAdapterRegistered(0)) {
-      Hive.registerAdapter(SajuDiaryAdapter());
+      Hive.registerAdapter(TarotDiaryAdapter());
     }
-    _diaryBox = await Hive.openBox<SajuDiary>(_boxName);
+    _diaryBox = await Hive.openBox<TarotDiary>(_boxName);
     _tagBox = await Hive.openBox<String>(_tagBoxName);
   }
 
   /// Hive 박스 인스턴스
-  Box<SajuDiary> get diaryBox {
+  Box<TarotDiary> get diaryBox {
     if (_diaryBox == null || !_diaryBox!.isOpen) {
       throw StateError('DiaryService not initialized. Call init() first.');
     }
@@ -53,7 +53,7 @@ class DiaryService {
   }
 
   /// 일기 저장 (로컬 + 클라우드)
-  Future<void> saveDiary(SajuDiary diary) async {
+  Future<void> saveDiary(TarotDiary diary) async {
     // 1. Hive에 즉시 저장
     await diaryBox.put(diary.id, diary);
 
@@ -62,12 +62,12 @@ class DiaryService {
   }
 
   /// 클라우드(Firestore)에만 자동 저장 (모바일 기기 저장 안 함)
-  Future<void> saveToCloudOnly(SajuDiary diary) async {
+  Future<void> saveToCloudOnly(TarotDiary diary) async {
     await _syncSingleToCloud(diary);
   }
 
   /// 모바일 기기(Hive)에만 수동 저장 (이미 클라우드에 있다고 가정하거나, 로컬 단독 사용)
-  Future<void> saveToLocalOnly(SajuDiary diary) async {
+  Future<void> saveToLocalOnly(TarotDiary diary) async {
     await diaryBox.put(diary.id, diary);
   }
 
@@ -98,20 +98,20 @@ class DiaryService {
   }
 
   /// 일기 업데이트 (후일담, 태그 등)
-  Future<void> updateDiary(SajuDiary diary) async {
+  Future<void> updateDiary(TarotDiary diary) async {
     await diaryBox.put(diary.id, diary);
     await _syncSingleToCloud(diary);
   }
 
   /// 모든 일기 가져오기 (최신순)
-  List<SajuDiary> getAllDiaries() {
+  List<TarotDiary> getAllDiaries() {
     final diaries = diaryBox.values.toList();
     diaries.sort((a, b) => b.date.compareTo(a.date));
     return diaries;
   }
 
   /// 특정 날짜의 일기 가져오기
-  List<SajuDiary> getDiariesByDate(DateTime date) {
+  List<TarotDiary> getDiariesByDate(DateTime date) {
     return diaryBox.values.where((d) {
       return d.date.year == date.year &&
           d.date.month == date.month &&
@@ -121,14 +121,14 @@ class DiaryService {
   }
 
   /// 특정 태그의 일기 가져오기
-  List<SajuDiary> getDiariesByTag(String tag) {
+  List<TarotDiary> getDiariesByTag(String tag) {
     return diaryBox.values.where((d) => d.tags.contains(tag)).toList()
       ..sort((a, b) => b.date.compareTo(a.date));
   }
 
   /// 일기가 있는 날짜 목록 (캘린더 마커용)
-  Map<DateTime, List<SajuDiary>> getDiaryEvents() {
-    final Map<DateTime, List<SajuDiary>> events = {};
+  Map<DateTime, List<TarotDiary>> getDiaryEvents() {
+    final Map<DateTime, List<TarotDiary>> events = {};
     for (final diary in diaryBox.values) {
       final dateKey = DateTime(diary.date.year, diary.date.month, diary.date.day);
       events.putIfAbsent(dateKey, () => []).add(diary);
@@ -180,7 +180,7 @@ class DiaryService {
       int count = 0;
       for (final doc in snapshot.docs) {
         if (!diaryBox.containsKey(doc.id)) {
-          final diary = SajuDiary.fromFirestore(doc);
+          final diary = TarotDiary.fromFirestore(doc);
           await diaryBox.put(doc.id, diary);
           count++;
         }
@@ -205,7 +205,7 @@ class DiaryService {
   }
 
   /// 단일 일기를 Firestore에 업로드
-  Future<void> _syncSingleToCloud(SajuDiary diary) async {
+  Future<void> _syncSingleToCloud(TarotDiary diary) async {
     try {
       final user = _getCurrentUser();
       if (user == null) return;
@@ -228,12 +228,13 @@ class DiaryService {
           'diaryId': diary.id,
           'authorId': user.uid,
           'authorNickname': nickname,
-          'sajuData': diary.sajuData,
+          'cardIds': diary.cardIds.isNotEmpty ? diary.cardIds : [diary.cardId],
+          'cardReversals': diary.cardReversals,
           'question': diary.myNote,
           'content': diary.resultText,
-          'language': 'ko',
+          'language': 'ko', // 기본 로케일 (향후 로케일 매니저로 동적 설정 가능)
           'translations': {},
-          'likeCount': 0,
+          'likeCount': 0, // 이미 있다면 덮어쓰지 않도록 트랜잭션 사용 필요. (여기선 간략히 유지)
           'commentCount': 0,
           'createdAt': Timestamp.fromDate(diary.date),
           'tags': diary.tags,

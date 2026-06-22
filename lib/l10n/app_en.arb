@@ -1,4 +1,4 @@
-{
+﻿{
   "@@locale": "en",
   "appTitle": "Tarot Reading",
   "spreadSelectionTitle": "Select a Spread",
@@ -1740,4 +1740,21 @@
   "contactCancel": "Cancel",
   "contactEmptyErrorTitle": "Notice",
   "contactEmptyErrorMessage": "Please enter your inquiry content."
+  ,"witchSajuGreetingMorgan": "I shall look into your fate. Please tell me your name and birth year, month, day, and time...",
+  "witchSajuGreetingLuna": "Let's see what the spirits say. I need your name, birth year, month, day, and time.",
+  "witchSajuGreetingSerena": "Listen carefully... tell me your name and the year, month, day, and time you were born.",
+  "witchSajuGreetingAria": "Hehe! What's your name, birth year, month, day, and time?",
+  "witchSajuGreetingEvelyn": "The flow of energy requires your birth details. Please provide your name, year, month, day, and time.",
+  "witchSajuGreetingKaren": "To read the heavens, I must know when you arrived. Tell me your birth year, month, day, and time.",
+  "sajuInputTitle": "Enter Birth Details",
+  "sajuInputSubtitle": "Please enter your birth date and time to proceed.",
+  "sajuInputName": "Name",
+  "sajuInputYear": "Year",
+  "sajuInputMonth": "Month",
+  "sajuInputDay": "Day",
+  "sajuInputTime": "Time",
+  "sajuInputCancel": "Cancel",
+  "sajuInputConfirm": "Confirm"
 }
+
+

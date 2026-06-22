@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import '../widgets/gradient_background.dart';
 import '../widgets/glass_container.dart';
 import 'package:flutter_tarot/l10n/app_localizations.dart';
-import 'reading_screen.dart';
+import 'tarot_reading_screen.dart';
 import '../services/tarot_ai_service.dart';
 import '../services/tts_service.dart';
 import '../services/economy_service.dart';
 import '../data/shaman_data.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../services/diary_service.dart';
+import '../services/tarot_diary_service.dart';
 import '../data/tarot_diary.dart';
 
 class ChatMessage {
@@ -279,7 +279,7 @@ class _ChatScreenState extends State<ChatScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => ReadingScreen(
+        builder: (context) => TarotReadingScreen(
           isForChat: true,
           onCardsPicked: _handleCardsPicked,
         ),
@@ -355,7 +355,7 @@ class _ChatScreenState extends State<ChatScreen> {
         witchId: _selectedWitch.id,
       );
 
-      await DiaryService.instance.saveToCloudOnly(diary);
+      await TarotDiaryService.instance.saveToCloudOnly(diary);
 
       // 말풍?�에 ?�??버튼???�기 ?�해 마�?�?메시지 교체
       if (mounted) {
@@ -417,7 +417,7 @@ class _ChatScreenState extends State<ChatScreen> {
               padding: const EdgeInsets.only(top: 4.0, bottom: 8.0),
               child: OutlinedButton.icon(
                 onPressed: () async {
-                  await DiaryService.instance.saveToLocalOnly(message.attachedDiary!);
+                  await TarotDiaryService.instance.saveToLocalOnly(message.attachedDiary!);
                   if (mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(

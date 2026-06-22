@@ -9,6 +9,7 @@ class AudioService {
 
   final AudioPlayer _bgmPlayer = AudioPlayer();
   final AudioPlayer _sfxPlayer = AudioPlayer();
+  final AudioPlayer _tinklePlayer = AudioPlayer();
 
   bool _isBgmPlaying = false;
   bool _isMuted = false;
@@ -20,6 +21,7 @@ class AudioService {
   Future<void> init() async {
     // Set BGM to loop
     await _bgmPlayer.setReleaseMode(ReleaseMode.loop);
+    await _tinklePlayer.setReleaseMode(ReleaseMode.loop);
   }
 
   Future<void> playMysteriousBgm() async {
@@ -48,6 +50,23 @@ class AudioService {
       await _sfxPlayer.play(AssetSource('audio/thunder.ogg'), volume: _volume * 2.0);
     } catch (e) {
       print("Error playing thunder sound: $e");
+    }
+  }
+
+  Future<void> playTinkleSound() async {
+    if (_isMuted) return;
+    try {
+      await _tinklePlayer.play(AssetSource('audio/tinkle_sound.mp3'), volume: _volume);
+    } catch (e) {
+      print("Error playing tinkle sound: $e");
+    }
+  }
+
+  Future<void> stopTinkleSound() async {
+    try {
+      await _tinklePlayer.stop();
+    } catch (e) {
+      print("Error stopping tinkle sound: $e");
     }
   }
 
@@ -99,5 +118,6 @@ class AudioService {
   void dispose() {
     _bgmPlayer.dispose();
     _sfxPlayer.dispose();
+    _tinklePlayer.dispose();
   }
 }
